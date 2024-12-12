@@ -1,1 +1,1 @@
-print("Bon courage pour la suite")
+print("Bon courage pour la suite ")
