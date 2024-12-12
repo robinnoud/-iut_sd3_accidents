@@ -48,4 +48,11 @@ vals = ax.get_xticks()
 for tick in vals:
   ax.axvline(x=tick, linestyle='dashed', alpha=0.4, color='#eeeeee', zorder=1)
 
-nan_values.to_csv('step2/missing_values_deleted.csv', index=False)
+nans = ['v1','v2','lartpc',
+       'larrout','locp','etatp',
+       'actp','voie','pr1',
+       'pr','place']
+
+victime = victime.drop(columns = nans)
+victime = victime.dropna()
+victime.to_csv('step2/missing_values_deleted.csv', index=False)
